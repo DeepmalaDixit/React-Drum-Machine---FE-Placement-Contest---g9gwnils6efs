@@ -1,0 +1,160 @@
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Oswald', sans-serif;
+}
+
+body {
+  font-family: 'Nanum Gothic Coding', monospace;
+  background-color: #9dccff;
+}
+
+header {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+#main-title {
+  text-align: center;
+  font-size: 3rem;
+}
+
+#root {
+  position: relative;
+}
+
+#drum-machine {
+  display: grid;
+  grid-auto-rows: auto auto;
+  grid-row-gap: 2rem;
+  padding: 1.5rem 2rem;
+  justify-content: center;
+}
+#div-pads {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: stretch;
+  width: 100%;
+  max-width: 500px;
+  min-height: 40rem;
+}
+.drum-pad {
+  width: 33%;
+  height: 33%;
+  font-family: 'Nanum Gothic Coding', monospace;
+  font-size: 2rem;
+  border: 1px solid coral;
+  border-radius: 40px;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  text-align: center;
+  background: hsla(197, 100%, 61%, 0.7);
+  box-shadow: 0.15rem 0.4rem 1.2rem rgba(0,0,0, 0.2);
+}
+.drum-pad:hover {
+  background: coral;
+  border: 1px solid dodgerblue;
+  transition: background 300ms;
+}
+#display {
+  min-height: 4rem;
+  font-size: 2rem;
+  margin: auto;
+  border-bottom: 1px solid blue;
+  width: 100%;
+  position: relative;
+  display: block;
+  padding-top: 1.9rem;
+  text-align: center;
+}
+
+#control-screen {
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+}
+#power {
+  opacity: 0;
+  width: 6rem;
+  height: 3rem;
+  cursor: pointer;
+  position: absolute;
+}
+.checkmark {
+  display: inline-block;
+  left: 10rem;
+  width: 8rem;
+  height: 4rem;
+  cursor: pointer;
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+  border-radius: 0.8rem;
+  background-color: hsla(140, 90%, 55%, 0.88);
+  padding-top: 0.5%;
+  margin-bottom: 2rem;
+  letter-spacing: 0.3rem;
+  transition: background-color 850ms 50ms;
+}
+#power:checked ~ .checkmark {
+  background-color: hsla(10, 90%, 55%, 0.88);
+  color: white;
+  transition: background-color 850ms 50ms;
+}
+#label-volume {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+#volume {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 80%;
+  align-self: center;
+  background: #ccc;
+  height: 1.5rem;
+  border-radius: 0.5rem;
+  outline: none;
+  opacity: 0.7;
+}
+#volume:hover {
+  opacity: 1;
+}
+#volume::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  background: salmon;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+#volume-display {
+  display: block;
+  margin: 3rem auto;
+  font-size: 1.8rem;
+  border-bottom: 1px solid black;
+  border-width: 80%;
+  text-align: center;
+}
+
+footer {
+  padding: 2.5rem;
+  text-align: center;
+  font-size: 1.8rem;
+  font-family: 'Oswald', sand-serif;
+  letter-spacing: 0.15rem;
+}
